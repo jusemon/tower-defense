@@ -38,6 +38,7 @@ public class TagetLocator : MonoBehaviour
 
     void AimWeapon()
     {
+        if (target == null) return;
         float targetDistance = Vector3.Distance(transform.position, target.position);
         weapon.LookAt(target.position);
         Attack(targetDistance < range);
